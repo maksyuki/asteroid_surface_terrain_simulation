@@ -1,6 +1,8 @@
-% according to the thesis above:
-% Terrain analysis and simulation verification on rubblepile-constructed 
-% asteroid surfaces
+% This is unoffical code mainly based the follow thesis:
+% WANG Y LIU P, WU H Y, et al. Terrain analysis and simulation 
+% verification on rubblepile-constructed asteroid surfaces[J].
+% Journal of Deep Space Exploration 2019, 6(5): 481-487
+
 
 clc;
 close all;
@@ -9,7 +11,6 @@ addpath(genpath(pwd));
 
 
 % d mean the randow size
-
 DUST_DMIN = 0.02;
 DUST_DMAX = 0.05;
 
@@ -17,13 +18,13 @@ COBBLE_DMIN = 0.05;
 COBBLE_DMAX = 0.5;
 
 BOULDER_DMIN = 0.5;
-BOULDER_DMAX = 1;
+BOULDER_DMAX = 5;
 
 
 dust_alpha = 4.8;
 dust_beta = 1 - (DUST_DMIN/DUST_DMAX)^dust_alpha;
 
-dust_d = DUST_DMIN / (1 - dust_beta * rand(1, 1)) ^(1 / dust_alpha);
+dust_d = DUST_DMIN / ((1 - dust_beta * rand(1, 1))^(1 / dust_alpha));
 
 
 [node_x, node_y, node_z, TRI] = make_icosahedron(1, dust_d, 1, 1, 0);
@@ -45,7 +46,7 @@ end
 stretch_matrix = dust_d * stretch_matrix;
 node = node + stretch_matrix;
 
-handle = trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', [1 1 1], 'EdgeColor', 0.5*[1 1 1], 'LineWidth', 1 );
+handle = trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', [1 1 1], 'EdgeColor', 0.5*[1 1 1], 'LineWidth', 1);
 xlabel('x-axis (m)', 'Fontsize', 16');
 ylabel('y-axis (m)', 'Fontsize', 16');
 zlabel('z-axis (m)', 'Fontsize', 16');
@@ -103,7 +104,7 @@ axis equal;
 grid off;
 
 % FIGURE 4 --------------------------------------
-% generate the surface
+% generate the surface(3X3m)
 
 
 
