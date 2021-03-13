@@ -21,7 +21,7 @@ beta = 1 - (d_min/d_max)^alpha;
 d = d_min / ((1 - beta * rand(1, 1))^(1 / alpha));
 
 
-[node_x, node_y, node_z, TRI] = make_icosahedron(1, d, 1, 1, 0);
+[node_x, node_y, node_z, TRI] = make_icosahedron(1, d, 1, 0, 0);
 
 node = [node_x; node_y; node_z]';
 
