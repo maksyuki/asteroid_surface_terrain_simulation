@@ -27,19 +27,19 @@ DUST_ALPHA = 4.8;
 % Terrain one(consist of only the dust)
 % the position of the dust is subject to uniform distribution
 % In 1024X1024 size surface
-surface = zeros(1024, 3);
-visited = zeros(1024, 1024);
+surface = zeros(2048, 3);
+visited = zeros(2048, 2048);
 
 cnt = 1;
 EPS = 1e-3;
 
 while(1)
-    if(cnt > 1000)
+    if(cnt > 2000)
         break;
     end
     
-    tmpx = floor(1024 * rand(1, 1));
-    tmpy = floor(1024 * rand(1, 1));
+    tmpx = floor(2048 * rand(1, 1));
+    tmpy = floor(2048 * rand(1, 1));
     if(tmpx == 0) 
         tmpx = 1;
     end
@@ -58,14 +58,14 @@ while(1)
         node(:,1) = node(:,1) * 300 + tmpx;
         node(:,2) = node(:,2) * 300 + tmpy;
         node(:,3) = node(:,3) * 300 + surface(cnt, 3);
-        trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor',  0.5*[1 1 1], 'EdgeColor', 0.5*[1 1 1], 'LineWidth', 1);
+        trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', 'blue', 'EdgeColor', 'blue', 'LineWidth', 1);
         hold on;
         cnt = cnt + 1;
         disp(cnt);
     end
 end
 
-v = [0 0; 1024 0; 1024 1024; 0 1024];
+v = [0 0; 2048 0; 2048 2048; 0 2048];
 f = [1 2 3 4];
 % 'FaceColor', '[0.5 0.54 0.53]'
 patch('Faces', f, 'Vertices', v, 'FaceColor', '[0.8 0.8 0.8]', 'FaceAlpha', 1);

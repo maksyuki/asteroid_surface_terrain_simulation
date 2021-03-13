@@ -20,12 +20,10 @@ COBBLE_DMAX = 0.5;
 BOULDER_DMIN = 2;
 BOULDER_DMAX = 5;
 
-
 ALPHA = 2.8;
-
 % generate the surface
 
-% Terrain one(consist of all kind of the rock)
+% Terrain one(consist of only the dust)
 % the position of the dust is subject to uniform distribution
 % In 1024X1024 size surface
 surface = zeros(2048, 3);
@@ -55,27 +53,17 @@ while(1)
         surface(cnt, 1) = tmpx;
         surface(cnt, 2) = tmpy;
         surface(cnt, 3) = -0.5 + rand(1, 1);
-        tmpSize = floor(1 + 3 * rand(1, 1));
         
-%         tmpSize = 3;
-        disp(tmpSize);
-        if(tmpSize == 1) 
-            [node, TRI] = gen_rock(DUST_DMIN, DUST_DMAX, ALPHA);
-            node(:,1) = node(:,1) * 300 + tmpx;
-            node(:,2) = node(:,2) * 300 + tmpy;
-            node(:,3) = node(:,3) * 300 + surface(cnt, 3);
-            trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', 'blue', 'EdgeColor', 'blue', 'LineWidth', 1);
-            hold on;
-        end
-        if(tmpSize == 2) 
+        if rem(cnt, 2) == 0
+            disp(cnt);
             [node, TRI] = gen_rock(COBBLE_DMIN, COBBLE_DMAX, ALPHA);
             node(:,1) = node(:,1) * 40 + tmpx;
             node(:,2) = node(:,2) * 40 + tmpy;
             node(:,3) = node(:,3) * 40 + surface(cnt, 3);
             trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', 'red', 'EdgeColor', 'red', 'LineWidth', 1);
             hold on;
-        end
-        if(tmpSize == 3) 
+        else
+            disp(cnt);
             [node, TRI] = gen_rock(BOULDER_DMIN, BOULDER_DMAX, ALPHA);
             node(:,1) = node(:,1) * 6 + tmpx;
             node(:,2) = node(:,2) * 6 + tmpy;
@@ -83,9 +71,44 @@ while(1)
             trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', 'green', 'EdgeColor', 'green', 'LineWidth', 1);
             hold on;
         end
-        
         cnt = cnt + 1;
+    end
+end
+
+
+visited_2 = zeros(2048, 2048);
+
+cnt = 1;
+while(1)
+    if(cnt > 100)
+        break;
+    end
+    
+    tmpx = floor(2048 * rand(1, 1));
+    tmpy = floor(2048 * rand(1, 1));
+    
+    if(tmpx == 0) 
+        tmpx = 1;
+    end
+    
+    if(tmpy == 0)
+        tmpy = 1;
+    end
+    
+    if(~(tmpx >= 1500 && tmpx <= 2000 && tmpy >= 0 && tmpy <= 500))
+        continue;
+    end
+    
+    if(visited_2(tmpx, tmpy) < EPS)
         disp(cnt);
+        cnt = cnt + 1;
+        visited_2(tmpx, tmpy) = 1;
+        [node, TRI] = gen_rock(DUST_DMIN, DUST_DMAX, ALPHA);
+        node(:,1) = node(:,1) * 300 + tmpx;
+        node(:,2) = node(:,2) * 300 + tmpy;
+        node(:,3) = node(:,3) * 300 + surface(cnt, 3);
+        trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', 'blue', 'EdgeColor', 'blue', 'LineWidth', 1);
+        hold on;
     end
 end
 
@@ -97,5 +120,7 @@ xlabel('x-axis (m)', 'Fontsize', 16');
 ylabel('y-axis (m)', 'Fontsize', 16');
 zlabel('z-axis (m)', 'Fontsize', 16');
 grid on;
+% scatter3(surface(:,1), surface(:,2), surface(:,3));
+% title( ['Add Reshape Matrix Effect'], 'Fontsize', 16');
 axis equal;
 grid off;

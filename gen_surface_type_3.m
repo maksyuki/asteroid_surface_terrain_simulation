@@ -57,7 +57,7 @@ while(1)
         surface(cnt, 3) = -0.5 + rand(1, 1);
         tmpSize = floor(1 + 3 * rand(1, 1));
         
-%         tmpSize = 3;
+        tmpSize = 1;
         disp(tmpSize);
         if(tmpSize == 1) 
             [node, TRI] = gen_rock(DUST_DMIN, DUST_DMAX, ALPHA);
@@ -86,6 +86,113 @@ while(1)
         
         cnt = cnt + 1;
         disp(cnt);
+    end
+end
+
+
+visited_2 = zeros(2048, 2048);
+
+cnt = 1;
+while(1)
+    if(cnt > 100)
+        break;
+    end
+    
+    tmpx = floor(600 * rand(1, 1));
+    tmpy = floor(600 * rand(1, 1));
+    
+    if(tmpx == 0) 
+        tmpx = 1;
+    end
+    
+    if(tmpy == 0)
+        tmpy = 1;
+    end
+    
+    if(tmpx + tmpy > 600)
+        continue;
+    end
+    
+    if(visited_2(tmpx, tmpy) < EPS)
+        disp(cnt);
+        cnt = cnt + 1;
+        visited_2(tmpx, tmpy) = 1;
+        [node, TRI] = gen_rock(BOULDER_DMIN, BOULDER_DMAX, ALPHA);
+        node(:,1) = node(:,1) * 6 + tmpx;
+        node(:,2) = node(:,2) * 6 + tmpy;
+        node(:,3) = node(:,3) * 6 + surface(cnt, 3);
+        trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', 'green', 'EdgeColor', 'green', 'LineWidth', 1);
+        hold on;
+    end
+end
+
+cnt = 1;
+while(1)
+    if(cnt > 100)
+        break;
+    end
+    
+    tmpx = floor(1200 * rand(1, 1));
+    tmpy = floor(1200 * rand(1, 1));
+    
+    if(tmpx == 0) 
+        tmpx = 1;
+    end
+    
+    if(tmpy == 0)
+        tmpy = 1;
+    end
+    
+    disp(tmpx + tmpy);
+    if(tmpx + tmpy > 1200 || tmpx + tmpy < 600)
+        continue;
+    end
+    
+    if(visited_2(tmpx, tmpy) < EPS)
+        disp(cnt);
+        cnt = cnt + 1;
+        visited_2(tmpx, tmpy) = 1;
+        [node, TRI] = gen_rock(BOULDER_DMIN, BOULDER_DMAX, ALPHA);
+        node(:,1) = node(:,1) * 6 + tmpx;
+        node(:,2) = node(:,2) * 6 + tmpy;
+        node(:,3) = node(:,3) * 6 + surface(cnt, 3);
+        trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', 'green', 'EdgeColor', 'green', 'LineWidth', 1);
+        hold on;
+    end
+end
+
+cnt = 1;
+while(1)
+    if(cnt > 100)
+        break;
+    end
+    
+    tmpx = floor(1800 * rand(1, 1));
+    tmpy = floor(1800 * rand(1, 1));
+    
+    if(tmpx == 0) 
+        tmpx = 1;
+    end
+    
+    if(tmpy == 0)
+        tmpy = 1;
+    end
+    
+    disp(tmpx + tmpy);
+    if(tmpx + tmpy > 1800 || tmpx + tmpy < 1200)
+        continue;
+    end
+    
+    if(visited_2(tmpx, tmpy) < EPS)
+        disp(cnt);
+        cnt = cnt + 1;
+        visited_2(tmpx, tmpy) = 1;
+        [node, TRI] = gen_rock(BOULDER_DMIN, BOULDER_DMAX, ALPHA);
+        node(:,1) = node(:,1) * 6 + tmpx;
+        node(:,2) = node(:,2) * 6 + tmpy;
+        node(:,3) = node(:,3) * 6 + surface(cnt, 3);
+        trisurf(TRI, node(:,1), node(:,2), node(:,3), 'FaceColor', 'green', 'EdgeColor', 'green', 'LineWidth', 1);
+        hold on;
     end
 end
 
