@@ -1,0 +1,37 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = "STREAM"                                 
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "CLARKETAL2011B"                         
+  REFERENCE_DESC                   = "Clark, B.E., R.P. Binzel, E.S. Howell,  
+        E.A. Cloutis, M. Ockert-Bell, and 2 others, Asteroid (101955) 1999    
+        RQ36: Spectroscopy from 0.4 to 2.4 um and meteorite analogs, Icarus   
+        216(2), 462-475, doi:10.1016/j.icarus.2011.08.021, 2011.      "       
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "HERGENROTHERETAL2013"                   
+  REFERENCE_DESC                   = "Hergenrother, C.W., M.C. Nolan, R.P.    
+        Binzel, E.A. Cloutis, M.A. Barucci, and 11 others.  Lightcurve, Phase 
+        and Color Photometry of the OSIRIS-REx Target Asteroid (101955) Bennu.
+        Icarus, 226, 663-670, doi:10.1016/j.icarus.2013.05.044, 2013."        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "KRUGLYETAL1999"                         
+  REFERENCE_DESC                   = "Krugly, Yu.N., I.N. Belskaya, V.G.      
+        Shevchenko, V.G. Chiorny, F.P. Velichko, and 7 others, The near-Earth 
+        objects follow-up program: IV. CCD photometry in 1996-1999, Icarus    
+        158, 294-304, doi:10.1006/icar.2002.6884, 1999."                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "NOLANETAL2013"                          
+  REFERENCE_DESC                   = "Nolan, M.C., C. Magri, E.S. Howell,     
+        L.A.M. Benner, J.D. Giorgini, and 6 others, Shape Model and Surface   
+        Properties of the OSIRIS-REx Target Asteroid (101955) Bennu from Radar
+        and Lightcurve Observations, Icarus 226, 629-640,                     
+        doi:10.1016/j.icarus.2013.05.028, 2013.  "                            
+END_OBJECT                         = REFERENCE                                
+                                                                              
+END                                                                           

@@ -1,0 +1,48 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = STREAM                                   
+                                                                              
+OBJECT                             = TEXT                                     
+   PUBLICATION_DATE                = 2013-09-23  /*Label Generated*/          
+   NOTE                            = "Description of the contents of the      
+        catalog directory."                                                   
+END_OBJECT                         = TEXT                                     
+END                                                                           
+                                                                              
+                                                                              
+This directory contains the PDS catalog files for this data set. Instrument   
+host file names end in "host.cat". Instrument file names end in "inst.cat".   
+Target files, if any, are located in the TARGET sub-directory.                
+                                                                              
+                   catalog Directory Contents                                 
+                                                                              
+catinfo.txt - The file you are reading.                                       
+                                                                              
+dataset.cat - The catalog file for the data set "Asteroid (101955) Bennu Shape
+        Model V1.0".                                                          
+                                                                              
+i0038inst.cat - The catalog file for the instrument "Arecibo Planetary Radar  
+        Transmitter".                                                         
+                                                                              
+i0037inst.cat - The catalog file for the instrument "Arecibo 2380 MHz Radar   
+        Receiver".                                                            
+                                                                              
+i1833inst.cat - The catalog file for the instrument "Goldstone Solar System   
+        Radar Receiver".                                                      
+                                                                              
+i1834inst.cat - The catalog file for the instrument "Goldstone Solar System   
+        Radar Transmitter".                                                   
+                                                                              
+mission.cat - The catalog file for the mission "Support Archives".            
+                                                                              
+obs240t1host.cat - The catalog file for the instrument host "Arecibo          
+        Observatory 305-m fixed spherical reflecting antenna".                
+                                                                              
+obs338t6host.cat - The catalog file for the instrument host "Goldstone Complex
+        70-m steerable parabolic radio telescope".                            
+                                                                              
+ref.cat - A listing of all publications referenced in the data set.  This is  
+        analogous to a bibliography for the data set.                         
+                                                                              
+target - If the data set includes targets that are new to PDS, their target   
+        catalog files will appear in this directory.                          
+                                                                              

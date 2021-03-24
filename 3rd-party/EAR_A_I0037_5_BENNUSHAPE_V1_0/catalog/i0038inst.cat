@@ -1,0 +1,28 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = "STREAM"                                 
+LABEL_REVISION_NOTE                = "2004-04-22: Information loaded into OLAF
+        by Michael Nolan"                                                     
+                                                                              
+OBJECT                             = INSTRUMENT                               
+ INSTRUMENT_ID                     = "I0038"                                  
+ INSTRUMENT_HOST_ID                = "OBS240T1"                               
+                                                                              
+ OBJECT                            = INSTRUMENT_INFORMATION                   
+  INSTRUMENT_NAME                  = "ARECIBO PLANETARY RADAR TRANSMITTER"    
+  INSTRUMENT_TYPE                  = "RADAR TRANSMITTER"                      
+  INSTRUMENT_DESC                  = "                                        
+                                                                              
+                                                                              
+  Instrument Overview                                                         
+  ===================                                                         
+    The Arecibo Planetary Radar Transmitter transmits 1 MW continuous output  
+    power at 2380 MHz with a 27 MHz bandwidth (1 dB). It can be phase,        
+    frequency, and amplitude modulated."                                      
+ END_OBJECT                        = INSTRUMENT_INFORMATION                   
+                                                                              
+ OBJECT                            = INSTRUMENT_REFERENCE_INFO                
+  REFERENCE_KEY_ID                 = "N/A"                                    
+ END_OBJECT                        = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+END_OBJECT                         = INSTRUMENT                               
+END                                                                           

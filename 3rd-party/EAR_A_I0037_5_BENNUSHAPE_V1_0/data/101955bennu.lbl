@@ -1,0 +1,169 @@
+PDS_VERSION_ID                     = PDS3                                     
+                                                                              
+RECORD_TYPE                        = "FIXED_LENGTH"                           
+RECORD_BYTES                       = 41                                       
+FILE_RECORDS                       = 4040                                     
+                                                                              
+^VERTEX_TABLE                      = ("101955bennu.tab",1)                    
+^FACET_TABLE                       = ("101955bennu.tab",1349)                 
+                                                                              
+DATA_SET_ID                        = "EAR-A-I0037-5-BENNUSHAPE-V1.0"          
+PRODUCT_NAME                       = "ASTEROID (101955) BENNU SHAPE MODEL"    
+PRODUCT_ID                         = "101955BENNU_TAB"                        
+INSTRUMENT_HOST_ID                 = {"OBS240T1", "OBS338T6"}                 
+INSTRUMENT_HOST_NAME               = {"ARECIBO OBSERVATORY 305-M FIXED        
+        SPHERICAL REFLECTING ANTENNA", "GOLDSTONE COMPLEX 70-M STEERABLE      
+        PARABOLIC RADIO TELESCOPE"}                                           
+INSTRUMENT_ID                      = {"I0037", "I0038", "I1833", "I1834"}     
+INSTRUMENT_NAME                    = {"ARECIBO 2380 MHZ RADAR RECEIVER",      
+        "ARECIBO PLANETARY RADAR TRANSMITTER", "GOLDSTONE SOLAR SYSTEM RADAR  
+        RECEIVER", "GOLDSTONE SOLAR SYSTEM RADAR TRANSMITTER"}                
+TARGET_NAME                        = "101955 BENNU"                           
+TARGET_TYPE                        = "ASTEROID"                               
+START_TIME                         = 1999-09-21                               
+STOP_TIME                          = 2005-10-02                               
+PRODUCT_CREATION_TIME              = 2013-05-06  /* File uploaded to OLAF */  
+REFERENCE_KEY_ID                   = "NOLANETAL2013"                          
+                                                                              
+OBJECT                             = VERTEX_TABLE                             
+ ROWS                              = 1348                                     
+ ROW_BYTES                         = 41                                       
+ INTERCHANGE_FORMAT                = "ASCII"                                  
+ COLUMNS                           = 4                                        
+ DESCRIPTION                       = "This shape model of asteroid (101955)   
+        Bennu was created by Nolan et al. (2013, in press) based on radar and 
+        optical photometric observations made in 1999 and 2005. The model     
+        resolution is approximately 25m between vertices, with regions of     
+        higher resolution around the location of a topographical 'boulder' and
+        the symmetric region in the opposite hemisphere.                      
+                                                                              
+        The model has the format                                              
+                                                                              
+                v x1 y1 z1                                                    
+                                                                              
+                v x2 y2 z2                                                    
+                                                                              
+                v x3 y3 z3                                                    
+                                                                              
+                (etc.)                                                        
+                                                                              
+                f i1 j1 k1                                                    
+                                                                              
+                f i2 j2 k2                                                    
+                                                                              
+                (etc.)                                                        
+                                                                              
+                                                                              
+                                                                              
+        where the letter 'v' denotes a vertex and the letter 'f' denotes a    
+        triangular facet. The VERTEX_TABLE is the first part, describing the  
+        positions of the vertices of the shape model. The floating point      
+        numbers x1 y1 z1 are the coordinates of vertex 1, and so on (vertices 
+        are implicitly numbered beginning with 1). The origin is the center of
+        mass, and the axes are the principal axes of the shape model. This    
+        coordinate system should not be used to define a cartographic system, 
+        as the principal axes are not uniquely determined due to the symmetry 
+        of the shape. The z-axis is the spin axis or positive pole. The units 
+        are kilometers. The linking of vertices into facets is provided in the
+        FACET_TABLE. "                                                        
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 1                                        
+  NAME                             = "VERTEX_FLAG"                            
+  DESCRIPTION                      = "A 'v', indicating this record contains  
+        the coordinates of a vertex"                                          
+  DATA_TYPE                        = "CHARACTER"                              
+  START_BYTE                       = 1                                        
+  BYTES                            = 1                                        
+  FORMAT                           = "A1"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 2                                        
+  NAME                             = "X"                                      
+  DESCRIPTION                      = "X coordinate of the vertex"             
+  UNIT                             = "KILOMETER"                              
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 11                                       
+  BYTES                            = 9                                        
+  FORMAT                           = "F9.6"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 3                                        
+  NAME                             = "Y"                                      
+  DESCRIPTION                      = "Y coordinate of the vertex"             
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 21                                       
+  BYTES                            = 9                                        
+  FORMAT                           = "F9.6"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 4                                        
+  NAME                             = "Z"                                      
+  DESCRIPTION                      = "Z coordinate of the vertex"             
+  UNIT                             = "KILOMETER"                              
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 31                                       
+  BYTES                            = 9                                        
+  FORMAT                           = "F9.6"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+END_OBJECT                         = VERTEX_TABLE                             
+                                                                              
+OBJECT                             = FACET_TABLE                              
+ ROWS                              = 2692                                     
+ ROW_BYTES                         = 41                                       
+ INTERCHANGE_FORMAT                = "ASCII"                                  
+ COLUMNS                           = 4                                        
+ DESCRIPTION                       = "The FACET_TABLE is the second part of   
+        the shape model file providing the linking of vertices into facets.   
+        The integers i1 j1 k1 are the indices of the 3 vertices that form     
+        triangular facet 1, and so on."                                       
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 1                                        
+  NAME                             = "FACET_FLAG"                             
+  DESCRIPTION                      = "An 'f', indicating this record contain  
+        the indices of three vertices defining a single, triangular facet"    
+  DATA_TYPE                        = "CHARACTER"                              
+  START_BYTE                       = 1                                        
+  BYTES                            = 1                                        
+  FORMAT                           = "A1"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 2                                        
+  NAME                             = "VERTEX_1"                               
+  DESCRIPTION                      = "Index of the first vertex (record number
+        in the preceding table)"                                              
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 16                                       
+  BYTES                            = 4                                        
+  FORMAT                           = "I4"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 3                                        
+  NAME                             = "VERTEX_2"                               
+  DESCRIPTION                      = "Index of the second vertex"             
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 26                                       
+  BYTES                            = 4                                        
+  FORMAT                           = "I4"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 4                                        
+  NAME                             = "VERTEX_3"                               
+  DESCRIPTION                      = "Index of the third vertex"              
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 36                                       
+  BYTES                            = 4                                        
+  FORMAT                           = "I4"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+END_OBJECT                         = FACET_TABLE                              
+                                                                              
+END                                                                           

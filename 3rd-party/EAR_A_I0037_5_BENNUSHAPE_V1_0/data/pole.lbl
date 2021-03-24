@@ -1,0 +1,68 @@
+PDS_VERSION_ID                     = PDS3                                     
+                                                                              
+RECORD_TYPE                        = "FIXED_LENGTH"                           
+RECORD_BYTES                       = 31                                       
+FILE_RECORDS                       = 2                                        
+                                                                              
+^TABLE                             = "pole.tab"                               
+                                                                              
+DATA_SET_ID                        = "EAR-A-I0037-5-BENNUSHAPE-V1.0"          
+PRODUCT_NAME                       = "POLE ORIENTATION"                       
+PRODUCT_ID                         = "POLE_TAB"                               
+INSTRUMENT_HOST_ID                 = {"OBS240T1", "OBS338T6"}                 
+INSTRUMENT_HOST_NAME               = {"ARECIBO OBSERVATORY 305-M FIXED        
+        SPHERICAL REFLECTING ANTENNA", "GOLDSTONE COMPLEX 70-M STEERABLE      
+        PARABOLIC RADIO TELESCOPE"}                                           
+INSTRUMENT_ID                      = {"I0037", "I0038", "I1833", "I1834"}     
+INSTRUMENT_NAME                    = {"ARECIBO 2380 MHZ RADAR RECEIVER",      
+        "ARECIBO PLANETARY RADAR TRANSMITTER", "GOLDSTONE SOLAR SYSTEM RADAR  
+        RECEIVER", "GOLDSTONE SOLAR SYSTEM RADAR TRANSMITTER"}                
+TARGET_NAME                        = "101955 BENNU"                           
+TARGET_TYPE                        = "ASTEROID"                               
+START_TIME                         = "N/A"                                    
+STOP_TIME                          = "N/A"                                    
+PRODUCT_CREATION_TIME              = 2013-08-09  /* File uploaded to OLAF */  
+REFERENCE_KEY_ID                   = "NOLANETAL2013"                          
+                                                                              
+OBJECT                             = TABLE                                    
+ ROWS                              = 2                                        
+ ROW_BYTES                         = 31                                       
+ INTERCHANGE_FORMAT                = "ASCII"                                  
+ COLUMNS                           = 3                                        
+ DESCRIPTION                       = "Pole orientation, ecliptic coordinates, 
+        great circle"                                                         
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 1                                        
+  NAME                             = "PARAMETER_NAME"                         
+  DESCRIPTION                      = "Parameter name"                         
+  DATA_TYPE                        = "CHARACTER"                              
+  START_BYTE                       = 2                                        
+  BYTES                            = 21                                       
+  FORMAT                           = "A21"                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 2                                        
+  NAME                             = "VALUE"                                  
+  DESCRIPTION                      = "Pole orientation value in degrees"      
+  UNIT                             = "DEGREE"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 25                                       
+  BYTES                            = 3                                        
+  FORMAT                           = "I3"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 3                                        
+  NAME                             = "UNCERTAINTY"                            
+  DESCRIPTION                      = "Uncertainty in degrees"                 
+  UNIT                             = "DEGREE"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 29                                       
+  BYTES                            = 1                                        
+  FORMAT                           = "I1"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+END_OBJECT                         = TABLE                                    
+END                                                                           

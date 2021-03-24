@@ -60,7 +60,7 @@ while(1)
 %         tmpSize = 3;
         disp(tmpSize);
         if(tmpSize == 1) 
-            [node, TRI] = gen_rock(DUST_DMIN, DUST_DMAX, ALPHA);
+            [node, TRI] = gen_rock_funcs(DUST_DMIN, DUST_DMAX, ALPHA);
             node(:,1) = node(:,1) * 300 + tmpx;
             node(:,2) = node(:,2) * 300 + tmpy;
             node(:,3) = node(:,3) * 300 + surface(cnt, 3);
@@ -68,7 +68,7 @@ while(1)
             hold on;
         end
         if(tmpSize == 2) 
-            [node, TRI] = gen_rock(COBBLE_DMIN, COBBLE_DMAX, ALPHA);
+            [node, TRI] = gen_rock_funcs(COBBLE_DMIN, COBBLE_DMAX, ALPHA);
             node(:,1) = node(:,1) * 40 + tmpx;
             node(:,2) = node(:,2) * 40 + tmpy;
             node(:,3) = node(:,3) * 40 + surface(cnt, 3);
@@ -76,7 +76,7 @@ while(1)
             hold on;
         end
         if(tmpSize == 3) 
-            [node, TRI] = gen_rock(BOULDER_DMIN, BOULDER_DMAX, ALPHA);
+            [node, TRI] = gen_rock_funcs(BOULDER_DMIN, BOULDER_DMAX, ALPHA);
             node(:,1) = node(:,1) * 6 + tmpx;
             node(:,2) = node(:,2) * 6 + tmpy;
             node(:,3) = node(:,3) * 6 + surface(cnt, 3);

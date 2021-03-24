@@ -1,0 +1,28 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = "STREAM"                                 
+LABEL_REVISION_NOTE                = "2013-05-02: information loaded into OLAF
+        by Alessondra Springmann"                                             
+                                                                              
+OBJECT                             = INSTRUMENT                               
+ INSTRUMENT_ID                     = "I1833"                                  
+ INSTRUMENT_HOST_ID                = "OBS338T6"                               
+                                                                              
+ OBJECT                            = INSTRUMENT_INFORMATION                   
+  INSTRUMENT_NAME                  = "GOLDSTONE SOLAR SYSTEM RADAR RECEIVER"  
+  INSTRUMENT_TYPE                  = "RADAR RECEIVER"                         
+  INSTRUMENT_DESC                  = "                                        
+                                                                              
+                                                                              
+  Instrument Overview                                                         
+  ===================                                                         
+    The Goldstone Solar System Radar receiver is a cryogenically-cooled       
+    dual-channel HEMT low noise amplifier for receiving X-band radio signals  
+    at 8560 MHz or 3.5 cm wavelength."                                        
+ END_OBJECT                        = INSTRUMENT_INFORMATION                   
+                                                                              
+ OBJECT                            = INSTRUMENT_REFERENCE_INFO                
+  REFERENCE_KEY_ID                 = "N/A"                                    
+ END_OBJECT                        = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+END_OBJECT                         = INSTRUMENT                               
+END                                                                           

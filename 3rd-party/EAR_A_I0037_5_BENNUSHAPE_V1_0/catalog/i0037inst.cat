@@ -1,0 +1,29 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = "STREAM"                                 
+LABEL_REVISION_NOTE                = "2004-04-19: Information loaded into OLAF
+        by Michael Nolan"                                                     
+                                                                              
+OBJECT                             = INSTRUMENT                               
+ INSTRUMENT_ID                     = "I0037"                                  
+ INSTRUMENT_HOST_ID                = "OBS240T1"                               
+                                                                              
+ OBJECT                            = INSTRUMENT_INFORMATION                   
+  INSTRUMENT_NAME                  = "ARECIBO 2380 MHZ RADAR RECEIVER"        
+  INSTRUMENT_TYPE                  = "RADAR RECEIVER"                         
+  INSTRUMENT_DESC                  = "                                        
+                                                                              
+                                                                              
+  Instrument Overview                                                         
+  ===================                                                         
+    The Arecibo Planetary Radar combines a transmitter with 1 MW continuous   
+    output power and a bandwidth of 27 MHz (1-dB), with a single-pixel        
+    receiver. The transmitter can range-code the transmitted signal at up to a
+    20 MHz bandwidth, for a range resolution as fine as 50 ns, or 7.5 m."     
+ END_OBJECT                        = INSTRUMENT_INFORMATION                   
+                                                                              
+ OBJECT                            = INSTRUMENT_REFERENCE_INFO                
+  REFERENCE_KEY_ID                 = "N/A"                                    
+ END_OBJECT                        = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+END_OBJECT                         = INSTRUMENT                               
+END                                                                           

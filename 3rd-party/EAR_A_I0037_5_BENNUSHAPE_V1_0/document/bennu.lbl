@@ -1,0 +1,20 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = "STREAM"                                 
+DATA_SET_ID                        = "EAR-A-I0037-5-BENNUSHAPE-V1.0"          
+                                                                              
+^DOCUMENT                          = "bennu.pdf"                              
+                                                                              
+OBJECT                             = DOCUMENT                                 
+   DOCUMENT_NAME                   = "BENNU SHAPE MODEL SHOWING THE VIEWS     
+        ALONG THE PRINCIPAL AXES"                                             
+   PUBLICATION_DATE                = 2013-08-28                               
+   DOCUMENT_TOPIC_TYPE             = "AXES VIEWS"                             
+   INTERCHANGE_FORMAT              = "BINARY"                                 
+   DOCUMENT_FORMAT                 = "ADOBE PDF"                              
+   ABSTRACT_TEXT                   = ""                                       
+   DESCRIPTION                     = "The shape of Bennu showing the views    
+        along the principal axes. Some of the apparent north-south symmetry is
+        a model artifact from the near-equatorial viewing geometry. The       
+        'boulder' feature is actually in the southern hemisphere."            
+END_OBJECT                         = DOCUMENT                                 
+END                                                                           

@@ -1,0 +1,68 @@
+PDS_VERSION_ID                     = PDS3                                     
+                                                                              
+RECORD_TYPE                        = "FIXED_LENGTH"                           
+RECORD_BYTES                       = 31                                       
+FILE_RECORDS                       = 1                                        
+                                                                              
+^TABLE                             = "rotate.tab"                             
+                                                                              
+DATA_SET_ID                        = "EAR-A-I0037-5-BENNUSHAPE-V1.0"          
+PRODUCT_NAME                       = "ROTATION STATE"                         
+PRODUCT_ID                         = "ROTATE_TAB"                             
+INSTRUMENT_HOST_ID                 = {"OBS240T1", "OBS338T6"}                 
+INSTRUMENT_HOST_NAME               = {"ARECIBO OBSERVATORY 305-M FIXED        
+        SPHERICAL REFLECTING ANTENNA", "GOLDSTONE COMPLEX 70-M STEERABLE      
+        PARABOLIC RADIO TELESCOPE"}                                           
+INSTRUMENT_ID                      = {"I0037", "I0038", "I1833", "I1834"}     
+INSTRUMENT_NAME                    = {"ARECIBO 2380 MHZ RADAR RECEIVER",      
+        "ARECIBO PLANETARY RADAR TRANSMITTER", "GOLDSTONE SOLAR SYSTEM RADAR  
+        RECEIVER", "GOLDSTONE SOLAR SYSTEM RADAR TRANSMITTER"}                
+TARGET_NAME                        = "101955 BENNU"                           
+TARGET_TYPE                        = "ASTEROID"                               
+START_TIME                         = "N/A"                                    
+STOP_TIME                          = "N/A"                                    
+PRODUCT_CREATION_TIME              = 2013-09-23  /* File uploaded to OLAF */  
+REFERENCE_KEY_ID                   = "HERGENROTHERETAL2013"                   
+                                                                              
+OBJECT                             = TABLE                                    
+ ROWS                              = 1                                        
+ ROW_BYTES                         = 31                                       
+ INTERCHANGE_FORMAT                = "ASCII"                                  
+ COLUMNS                           = 3                                        
+ DESCRIPTION                       = "Rotation rate of Bennu in hours with    
+        uncertainty, from Hergenrother et al. (2013)."                        
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 1                                        
+  NAME                             = "PARAMETER_NAME"                         
+  DESCRIPTION                      = "Parameter name"                         
+  DATA_TYPE                        = "CHARACTER"                              
+  START_BYTE                       = 2                                        
+  BYTES                            = 13                                       
+  FORMAT                           = "A13"                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 2                                        
+  NAME                             = "VALUE"                                  
+  DESCRIPTION                      = "Rotation rate in hours"                 
+  UNIT                             = "HOUR"                                   
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 17                                       
+  BYTES                            = 7                                        
+  FORMAT                           = "F7.5"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 3                                        
+  NAME                             = "UNCERTAINTY"                            
+  DESCRIPTION                      = "Uncertainty in hours"                   
+  UNIT                             = "HOUR"                                   
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 25                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "F5.3"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+END_OBJECT                         = TABLE                                    
+END                                                                           

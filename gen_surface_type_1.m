@@ -54,7 +54,7 @@ while(1)
         surface(cnt, 1) = tmpx;
         surface(cnt, 2) = tmpy;
         surface(cnt, 3) = -0.5 + rand(1, 1);
-        [node, TRI] = gen_rock(DUST_DMIN, DUST_DMAX, DUST_ALPHA);
+        [node, TRI] = gen_rock_funcs(DUST_DMIN, DUST_DMAX, DUST_ALPHA);
         node(:,1) = node(:,1) * 300 + tmpx;
         node(:,2) = node(:,2) * 300 + tmpy;
         node(:,3) = node(:,3) * 300 + surface(cnt, 3);
